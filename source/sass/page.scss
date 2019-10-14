@@ -1,0 +1,48 @@
+.page {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: 'PT Mono', Courier, monospace;
+  color: $text-color;
+
+  background-color: $light-color;
+}
+
+.page h1 {
+  font-size: 80px;
+  font-weight: 700;
+  font-family: 'Roboto Condensed', Helvetica, sans-serif;
+  line-height: 94px;
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  margin-left: -4px;
+}
+
+.page h2 {
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.page h3 {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+
+@media (max-width: $m-width-max) {
+  .page h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+@media (max-width: $s-width-max) {
+  .page h1 {
+    margin-left: -2px;
+
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
