@@ -1,10 +1,10 @@
 .advantages {
   max-width: 1170px;
   margin: 0 auto;
+  margin-bottom: 75px;
   padding-left: $l-padding;
   padding-right: $l-padding;
   padding-top: 112px;
-  padding-bottom: 80px;
 }
 
 .advantages__list {
@@ -26,6 +26,7 @@
   margin-left: 3px;
   padding: 39px 42px;
 
+  background-color: $light-color;
   border: 1px solid $border-color;
   border-left: none;
   box-shadow: -3px 0px 0px 0px $brand-color;
@@ -71,10 +72,11 @@
 @media (max-width: $m-width-max) {
   .advantages {
     max-width: 773px;
+    margin-bottom: 0;
     padding-left: $m-padding;
     padding-right: $m-padding;
     padding-top: 54px;
-    padding-bottom: 25px;
+    // padding-bottom: 25px;
   }
 
   .advantages__item {
@@ -117,7 +119,7 @@
     padding-left: $s-padding;
     padding-right: $s-padding;
     padding-top: 37px;
-    padding-bottom: 37px;
+    padding-bottom: 14px;
   }
 
   .advantages__list {
