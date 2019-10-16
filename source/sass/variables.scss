@@ -8,7 +8,8 @@ $m-width-max: 1023px;
 $m-padding: 25px;
 
 $l-width: 1024px;
-$l-width: 1920px;
+$l-width-max: 1920px;
+$l-padding: 50px;
 
 // Resolution
 $retina-dpi: 144dpi;
@@ -18,9 +19,11 @@ $retina-dppx: 1.5dppx;
 $brand-color: #00B2FF;
 $light-color: #FFFFFF;
 $dark-color: #1B2D37;
+$dark-color-text: rgba(27, 45, 55, 0.5); // #8d969b
 $text-color: #666666;
 
 $border-color: #EBEBEB;
-$line-color: #626962;
-$icon-background-color: #999999;
+$line-color: rgba(98,105,98,.2); // Линия над футером футера
+// $icon-background-color: #999999;
+$icon-background-color: #CDCDCD; // Иконки соцсетей
 $cubtitle-color: #788891 // Умные технологии

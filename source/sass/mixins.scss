@@ -8,3 +8,24 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@mixin reset-list-style {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin full-width-line {
+  &::before {
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: -1000px;
+    right: -1000px;
+    background-color: $line-color;
+  }
+}
+
+
