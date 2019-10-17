@@ -31,3 +31,14 @@
        url('../fonts/pt-mono-v7-latin_cyrillic-regular.woff') format('woff');
 }
 
+/* roboto-500 - cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+       url('../fonts/roboto-v20-cyrillic-500.woff2') format('woff2'),
+       url('../fonts/roboto-v20-cyrillic-500.woff') format('woff');
+}
+
