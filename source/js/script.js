@@ -90,7 +90,7 @@ var enableModal = function () {
     evt.preventDefault();
     modal.classList.add('modal--opened');
     overlay.classList.add('overlay--showed');
-    nameInput.autofocus = true;
+    nameInput.focus();
   };
 
   // Закрыть модальное
