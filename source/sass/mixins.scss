@@ -28,4 +28,34 @@
   }
 }
 
+@mixin button {
+  display: inline-block;
+  padding: 14px 26px;
+
+  font-family: 'Roboto Condensed', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: $light-color;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 1px solid $light-color;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  &:active {
+    text-decoration: none;
+    opacity: 0.3;
+  }
+}
 

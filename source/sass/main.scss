@@ -1,4 +1,4 @@
-.main__container {
+.main__container--light {
   background-image: url("../img/l-main@1x.png");
   background-size: 2243px auto;
   background-repeat: no-repeat;
@@ -6,7 +6,7 @@
 }
 
 @media (max-width: $m-width-max) {
-  .main__container {
+  .main__container--light {
     background-image: url("../img/m-main@1x.png");
     background-size: 882px auto;
     background-position: 208px 83px;
@@ -14,7 +14,7 @@
 }
 
 @media (max-width: $s-width-max) {
-  .main__container {
+  .main__container--light {
     background-size: 874px auto;
     background-position: -121px 651px;
   }
@@ -22,14 +22,14 @@
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   @media (max-width: $l-width) {
-    .main__container {
+    .main__container--light {
       background-image: url("../img/l-main@2x.png");
       background-size: 2243px;
     }
   }
 
   @media (max-width: $m-width-max) {
-    .main__container {
+    .main__container--light {
       background-image: url("../img/m-main@2x.png");
       background-size: 873px;
       background-position: 210px 90px;
@@ -37,9 +37,18 @@
   }
 
   @media (max-width: $m-width-max) {
-    .main__container {
+    .main__container--light {
       background-size: 873px;
       background-position: -121px 651px;
     }
   }
+}
+
+.main__container--products {
+  background-color: $dark-color;
+}
+
+.main__container--consultation {
+  color: $light-color;
+  background-color: $brand-color;
 }

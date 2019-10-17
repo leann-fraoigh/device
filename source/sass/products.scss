@@ -1,0 +1,228 @@
+.products {
+  max-width: 1170px;
+  margin: 0 auto;
+  // margin-bottom: 75px;
+  padding-left: $l-padding;
+  padding-right: $l-padding;
+  padding-bottom: 127px;
+  padding-top: 59px;
+
+  color: $light-color;
+
+  background-color: $dark-color;
+}
+
+.products h2 {
+  font-size: 36px;
+  font-weight: 400 ;
+  line-height: 51px;
+  text-transform: none;
+}
+.products__list {
+  @include reset-list-style;
+
+  display: flex;
+  // justify-content: center;
+
+  margin-top: 50px;
+  @media (min-width: $l-width) {
+    margin-left: -30px;
+  }
+}
+.products__item {
+  position: relative;
+
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  min-height: 620px;
+  @media (min-width: $l-width) {
+    max-width: 370px;
+    margin-left: 30px;
+  }
+
+  background-color: rgba(98,105,98,.2);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus,
+  &:active {
+    filter: opacity(70%);
+  }
+
+  &--production {
+    background-image: url("../img/products1-l@1x.png");
+  }
+
+  &--assembling {
+    background-image: url("../img/products2-l@1x.png");
+  }
+
+  &--components {
+    background-image: url("../img/products3-l@1x.png");
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 63px;
+    height: 63px;
+    background-color: $brand-color;
+    background-image: url("../img/icon-arrow.svg");
+    background-size: 4px 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+  }
+}
+
+.products__item a {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 30px 44px;
+
+  text-decoration: none;
+}
+
+.products__item h3 {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 30px;
+
+  max-width: 165px;
+}
+
+@media (max-width: $m-width-max) {
+  .products {
+    max-width: 773px;
+    margin-bottom: 0;
+    padding-left: $m-padding;
+    padding-right: $m-padding;
+    padding-top: 23px;
+  }
+  .products h2 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .products__list {
+    flex-direction: column;
+
+    margin-left: 0;
+  }
+
+  .products__item {
+    min-height: 256px;
+    margin-bottom: 46px;
+
+    &--production {
+      background-image: url("../img/products1-m@1x.png");
+    }
+
+    &--assembling {
+      background-image: url("../img/products2-m@1x.png");
+    }
+
+    &--components {
+      background-image: url("../img/products3-m@1x.png");
+    }
+  }
+
+  .products__item a {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: $s-width-max) {
+  .products {
+    max-width: 737px;
+    padding-left: $s-padding;
+    padding-right: $s-padding;
+    padding-top: 27px;
+    padding-bottom: 34px;
+  }
+
+  .products h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .products__list {
+    margin-top: 42px;
+  }
+
+  .products__item {
+    margin-bottom: 30px;
+
+    &--production {
+      background-image: url("../img/products1-s@1x.png");
+    }
+
+    &--assembling {
+      background-image: url("../img/products2-s@1x.png");
+    }
+
+    &--components {
+      background-image: url("../img/products3-s@1x.png");
+    }
+  }
+
+  .products__item a {
+    padding: 0 35px;
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (max-width: $l-width) {
+    .products__item {
+      &--production {
+        background-image: url("../img/products1-l@2x.png");
+      }
+
+      &--assembling {
+        background-image: url("../img/products2-l@2x.png");
+      }
+
+      &--components {
+        background-image: url("../img/products3-l@2x.png");
+      }
+    }
+  }
+  @media (max-width: $m-width-max) {
+    .products__item {
+      &--production {
+        background-image: url("../img/products1-m@2x.png");
+      }
+
+      &--assembling {
+        background-image: url("../img/products2-m@2x.png");
+      }
+
+      &--components {
+        background-image: url("../img/products3-m@2x.png");
+      }
+    }
+  }
+  @media (max-width: $s-width-max) {
+    .products__item {
+      &--production {
+        background-image: url("../img/products1-s@2x.png");
+      }
+
+      &--assembling {
+        background-image: url("../img/products2-s@2x.png");
+      }
+
+      &--components {
+        background-image: url("../img/products3-s@2x.png");
+      }
+    }
+  }
+}
