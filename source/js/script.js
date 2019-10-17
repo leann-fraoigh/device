@@ -137,6 +137,26 @@ var enableModal = function () {
 };
 enableModal();
 
+
+// Сохранение данных
+if (window.localStorage) {
+  var modal = document.querySelector('.modal');
+  var elements = modal.querySelectorAll('[id^="customer"]');
+
+  for (var i = 0, length = elements.length; i < length; i++) {
+
+    (function (element) {
+      var name = element.getAttribute('id');
+
+      element.value = localStorage.getItem(name) || '';
+
+      element.onkeyup = function () {
+        localStorage.setItem(name, element.value);
+      };
+    })(elements[i]);
+  }
+}
+
 // var toggle = function (block) {
 //   var element = 'footer__' + block;
 //   var closed = 'footer__' + block + '--closed';
