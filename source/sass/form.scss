@@ -1,0 +1,59 @@
+.form {
+  & input[type=text],
+  & input[type=tel],
+  & textarea {
+    padding: 14px 16px 18px;
+    color: $light-color;
+    border: none;
+    background-color: rgba(225, 225, 225, .1);
+
+    &::placeholder {
+      color: $light-color;
+      opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba(225, 225, 225, .2);
+    }
+  }
+
+  & textarea {
+    resize: none;
+  }
+
+  & button {
+    @include button;
+  }
+
+  // Псевдочекбоксы
+  & .form__label--checkbox {
+    position: relative;
+    padding-left: 38px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 9px;
+      left: 6px;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $light-color;
+
+    }
+  }
+
+  & input[type=checkbox] {
+    @include visually-hidden;
+  }
+
+  & input[type=checkbox]:checked ~ .form__label--checkbox::before {
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 6px;
+  }
+}
+
+

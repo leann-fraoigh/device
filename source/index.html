@@ -70,7 +70,7 @@
         <a href="#" class="button">Подробнее</a>
       </section>
     </div>
-    <div class="main__container--products">
+    <div class="main__container-products">
       <section class="products">
         <h2>Service Device предлагает следующие товары и услуги</h2>
         <ul class="products__list">
@@ -92,24 +92,24 @@
         </ul>
       </section>
     </div>
-    <div class="main__container--consultation">
+    <div class="main__container-consultation">
       <section class="consultation">
         <h2 class="visually-hidden">Консультация</h2>
-        <p class="h2">Остались вопросы? Задайте их нам!</p>
-        <p>Мы проконсультируем Вас бесплатно</p>
-        <form action="#" method="POST" class="form">
+        <p class="consultation__title">Остались вопросы? Задайте их нам!</p>
+        <p class="consultation__subtitle">Мы проконсультируем Вас бесплатно</p>
+        <form action="https://echo.htmlacademy.ru" method="POST" class="consultation__form form">
           <div class="form__field">
-            <label for="phone" title="Ваше имя"></label>
+            <label for="name" title="Ваше имя"></label>
             <input id="customer-name" placeholder="Имя" type="text" name="name" required="">
           </div>
           <div class="form__field">
             <label for="phone" title="Ваш телефон"></label>
             <input id="customer-phone" placeholder="Телефон" type="tel" name="phone" required="">
           </div>
-          <textarea id="customer-queation" placeholder="Ваш вопрос" name="queation"></textarea>
+          <textarea id="customer-question" placeholder="Ваш вопрос" name="question"></textarea>
           <div class="form__field form__field--checkbox">
             <input id="personal-data" name="data" type="checkbox" checked="checked">
-            <label class="form__label--checkbox" for="personal-data">Я согласен на обработку персональных данных</label>
+            <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку персональных данных</label>
           </div>
           <button type="submit">Задать вопрос</button>
         </form>
