@@ -172,6 +172,29 @@
       </div>
     </div>
   </footer>
+  <section class="overlay"></section>
+  <section class="modal">
+    <button class="button modal__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <h2 class="visually-hidden">Консультация</h2>
+    <p class="modal__title">Закажите звонок</p>
+    <p class="modal__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form action="https://echo.htmlacademy.ru" method="POST" class="modal__form form">
+      <div class="form__field">
+        <label for="name" title="Ваше имя"></label>
+        <input id="customer-name" placeholder="Имя" type="text" name="name" required="" autofocus="">
+      </div>
+      <div class="form__field">
+        <label for="phone" title="Ваш телефон"></label>
+        <input id="customer-phone" placeholder="Телефон" type="tel" name="phone" required="">
+      </div>
+      <textarea id="customer-question" placeholder="Ваш вопрос" name="question"></textarea>
+      <div class="form__field form__field--checkbox">
+        <input id="personal-data" name="data" type="checkbox" checked="checked">
+        <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку персональных данных</label>
+      </div>
+      <button type="submit">Задать вопрос</button>
+    </form>
+  </section>
   <script src="js/script.js"></script>
   <script src="js/libs.js"></script>
 </body>

@@ -76,6 +76,67 @@ if (contactsToggle) {
   });
 }
 
+var enableModal = function () {
+  var Enter = 13;
+  var Esc = 27;
+  var modal = document.querySelector('.modal');
+  var openButton = document.querySelector('.contacts__button');
+  var overlay = document.querySelector('.overlay');
+  var closeButton = document.querySelector('.modal__close-button');
+  var nameInput = modal.querySelector('#customer-name');
+
+  // Открыть модальное
+  var openModal = function (evt) {
+    evt.preventDefault();
+    modal.classList.add('modal--opened');
+    overlay.classList.add('overlay--showed');
+    nameInput.autofocus = true;
+  };
+
+  // Закрыть модальное
+  var closeModal = function (evt) {
+    evt.preventDefault();
+    document.querySelector('.modal--opened').classList.remove('modal--opened');
+    overlay.classList.remove('overlay--showed');
+  };
+
+  // Добавить прослушивальщика событий на кнопку
+  openButton.addEventListener('click', function (evt) {
+    openModal(evt);
+  });
+
+  openButton.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === Enter) {
+      openModal(evt);
+    }
+  });
+
+  // Закрытие по нажатию клавиши
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === Esc) {
+      if (document.querySelector('.modal--opened')) {
+        closeModal(evt);
+      }
+    }
+  });
+
+  // Добавление прослушивальщика на овелей
+  overlay.addEventListener('click', function (evt) {
+    closeModal(evt);
+  });
+
+  // Добавление прослушивальщиков на кнопку
+  closeButton.addEventListener('click', function (evt) {
+    closeModal(evt);
+  });
+  closeButton.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === Enter) {
+      closeModal(evt);
+    }
+  });
+};
+enableModal();
+
 // var toggle = function (block) {
 //   var element = 'footer__' + block;
 //   var closed = 'footer__' + block + '--closed';
