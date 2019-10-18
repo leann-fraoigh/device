@@ -91,19 +91,19 @@
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  @media (max-width: $l-width) {
-    .about {
-      background-image: url("../img/2005-l@2x.jpg");
+  .about {
+    background-image: url("../img/2005-l@2x.jpg");
+
+    @media (max-width: $m-width-max) {
+      .about {
+        background-image: url("../img/2005@2x.jpg");
+      }
     }
-  }
-  @media (max-width: $m-width-max) {
-    .about {
-      background-image: url("../img/2005@2x.jpg");
-    }
-  }
-  @media (max-width: $s-width-max) {
-    .about {
-      background: none;
+    @media (max-width: $s-width-max) {
+      .about {
+        background: none;
+      }
     }
   }
 }
+
