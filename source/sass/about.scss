@@ -1,13 +1,15 @@
 .about {
-  max-width: 1270px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   box-sizing: border-box;
+  min-height: 317px;
+  max-width: 1270px;
   margin: 0 auto;
-  margin-bottom: 96px;
+  margin-bottom: 100px;
   padding-left: 230px;
   padding-right: 52px;
-  // padding-top: 59px;
-  // padding-top: 112px;
-  // padding-bottom: 80px;
 
   background-image: url("../img/2005-l@1x.jpg");
   background-size: 220px auto;
@@ -16,19 +18,21 @@
 }
 
 .about h2 {
-  margin-bottom: 21px;
+  margin-top: 0;
+  margin-bottom: 20px;
 
   font-weight: 400;
   text-transform: none;
 }
 
 .about p {
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
 .about .button {
-  margin-top: 20px;
-  margin-bottom: 12px;
+  margin-top: auto;
+  margin-bottom: 10px;
   padding-left: 49px;
   padding-right: 49px;
 
@@ -38,12 +42,11 @@
 
 @media (max-width: $m-width-max) {
   .about {
+    min-height: 362px;
     max-width: 823px;
-    margin-bottom: 65px;
+    margin-bottom: 72px;
     padding-left: 213px;
     padding-right: $m-padding;
-    // padding-top: 54px;
-    // padding-bottom: 25px;
 
     background-image: url("../img/2005@1x.jpg");
     background-size: 244px auto;
@@ -61,21 +64,17 @@
   .about span {
     display: none;
   }
-
-  .about .button {
-    margin-top: 21px;
-    margin-bottom: 18px;
-  }
 }
 
 @media (max-width: $s-width-max) {
   .about {
+    display: block;
+    min-height: auto;
     max-width: 767px;
-    margin-bottom: 47px;
+    margin-bottom: 55px;
     padding-left: $s-padding;
     padding-right: $s-padding;
-    // padding-top: 37px;
-    // padding-bottom: 37px;
+
     background: none;
   }
 
