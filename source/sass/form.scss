@@ -54,6 +54,11 @@
     background-position: center;
     background-size: 10px 6px;
   }
+
+  & input[type=checkbox]:hover ~ .form__label,
+  & input[type=checkbox]:focus ~ .form__label {
+    opacity: 1;
+  }
 }
 
 
