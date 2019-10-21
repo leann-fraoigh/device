@@ -7,7 +7,7 @@
 }
 
 .footer h2 {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   font-size: 15px;
   line-height: 16px;
@@ -40,19 +40,11 @@
 }
 
 .footer__logo {
-  // margin-top: 0;
-  // margin-bottom: 0;
   flex-grow: 1;
 
   margin-top: 12px;
   margin-right: 2px;
 }
-
-// @media (max-width: $l-width-max) and (min-width: $l-width) {
-//   .footer__copyright {
-//     display: flex;
-//   }
-// }
 
 .footer__copyright {
   display: flex;
@@ -274,7 +266,6 @@
     flex-basis: 100%;
 
     padding-top: 17px;
-    padding-bottom: 26px;
 
     &--opened {
       .button {
@@ -288,9 +279,9 @@
     }
   }
 
-  .footer__menu h2,
-  .footer__contacts h2 {
-    margin-bottom: 31px;
+  .footer__contacts p {
+    padding-top: 6px;
+    padding-bottom: 26px;
   }
 
   .footer__button {
