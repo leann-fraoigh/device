@@ -4,7 +4,7 @@
   margin: 0 auto;
   margin-bottom: 96px;
   padding-left: 230px;
-  padding-right: $l-padding;
+  padding-right: 52px;
   // padding-top: 59px;
   // padding-top: 112px;
   // padding-bottom: 80px;
@@ -84,6 +84,10 @@
 
     font-size: 28px;
     line-height: 39px;
+  }
+
+  .about p:not(:last-of-type) {
+    margin-bottom: 42px;
   }
 
   .about .button {
