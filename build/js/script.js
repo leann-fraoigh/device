@@ -181,14 +181,23 @@ if (window.localStorage) {
 // consultationLink.addEventListener('click', handleAnchorClick(consultationLink, consultation));
 
 // МАСКА ДЛЯ ПОЛЯ ТЕЛЕФОНА
-var telInput = document.getElementById('customer-phone-popup');
+var telInputPopup = document.getElementById('customer-phone-popup');
+var telInput = document.getElementById('customer-phone');
 
 var testSymbol = function () {
-  var text = telInput.value;
-  // eslint-disable-next-line eqeqeq
+  var id = event.target.id;
+  var element = document.getElementById(id);
+  var text = element.value;
   if (isNaN(text)) {
-    telInput.value = text.substring(0, text.length - 1);
+    element.value = text.substring(0, text.length - 1);
   }
 };
 
-telInput.addEventListener('keyup', testSymbol);
+if (telInputPopup) {
+  telInputPopup.addEventListener('keyup', testSymbol);
+}
+
+if (telInputPopup) {
+  telInput.addEventListener('keyup', testSymbol);
+}
+
