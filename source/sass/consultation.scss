@@ -3,15 +3,21 @@
   margin: 0 auto;
   box-sizing: border-box;
   padding-right: $l-padding;
-  padding-left: 650px;
+  padding-left: $l-padding;
   padding-top: 55px;
   padding-bottom: 72px;
 
+  // @media (min-width: $l-width) {
+  //   background-image: url("../img/airplane@1x.png");
+  //   background-repeat: no-repeat;
+  //   background-size: 511px auto;
+  //   background-position: 25px 161px;
+  // }
+}
+
+.consultation__container {
   @media (min-width: $l-width) {
-    background-image: url("../img/airplane@1x.png");
-    background-repeat: no-repeat;
-    background-size: 511px auto;
-    background-position: 25px 161px;
+    padding-left: calc(50% + 15px);
   }
 }
 
@@ -57,7 +63,7 @@
 
 .consultation .form__field--textarea {
   flex-basis: 100%;
-  margin-bottom: 41px; //Было 143
+  margin-bottom: 37px; //Было 143
   margin-left: 32px;
 
   // min-height: 122px;
@@ -173,10 +179,10 @@
   }
 }
 
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .consultation {
-    @media (min-width: $l-width) {
-      background-image: url("../img/airplane@2x.png");
-    }
-  }
-}
+// @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//   .consultation {
+//     @media (min-width: $l-width) {
+//       background-image: url("../img/airplane@2x.png");
+//     }
+//   }
+// }
