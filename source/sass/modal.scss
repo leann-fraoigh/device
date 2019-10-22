@@ -64,14 +64,29 @@
   margin-left: -32px;
 }
 
-.modal .form__field,
+.modal .form__field--text,
+.modal .form__field--tel,
+.modal .form__field--checkbox,
 .modal button {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 100%;
 
-  margin-bottom: 30px;
   margin-left: 32px;
+}
+
+.modal .form__field--text,
+.modal .form__field--tel {
+  margin-bottom: 30px;
+}
+
+
+.modal button {
+  margin-bottom: 34px;
+}
+
+.modal .form__field--checkbox {
+  margin-bottom: 15px;
 }
 
 
@@ -82,12 +97,16 @@
   padding: 15px 24px 19px;
 }
 
-.modal form textarea {
-  flex-basis: 100%;
 
-  min-height: 70px;
-  margin-bottom: 30px;
+.modal .form__field--textarea {
+  flex-basis: 100%;
+  margin-bottom: 24px;
   margin-left: 32px;
+}
+.modal form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 104px;
   padding: 15px 24px 19px;
 
 }

@@ -98,15 +98,18 @@
         <p class="consultation__title">Остались вопросы? Задайте их нам!</p>
         <p class="consultation__subtitle">Мы проконсультируем Вас бесплатно</p>
         <form action="https://echo.htmlacademy.ru" method="POST" class="consultation__form form">
-          <div class="form__field">
+          <div class="form__field form__field--text">
             <label for="customer-name" title="Ваше имя"></label>
             <input id="customer-name" placeholder="Имя" type="text" name="name" required="">
           </div>
-          <div class="form__field">
+          <div class="form__field form__field--tel">
             <label for="customer-phone" title="Ваш телефон"></label>
             <input id="customer-phone" placeholder="Телефон" type="tel" name="phone" required="">
           </div>
-          <textarea id="customer-question" placeholder="Ваш вопрос" name="question"></textarea>
+          <div class="form__field form__field--textarea">
+            <label for="customer-phone" title="Задайте вопрос"></label>
+            <textarea id="customer-question" placeholder="Ваш вопрос" name="question"></textarea>
+          </div>
           <div class="form__field form__field--checkbox">
             <input id="personal-data" name="data" type="checkbox" checked="checked">
             <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку персональных данных</label>
@@ -181,20 +184,23 @@
     <p class="modal__title">Закажите звонок</p>
     <p class="modal__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
     <form action="https://echo.htmlacademy.ru" method="POST" class="modal__form form">
-      <div class="form__field">
+      <div class="form__field form__field--text">
         <label for="customer-name-popup" title="Ваше имя"></label>
         <input id="customer-name-popup" placeholder="Имя" type="text" name="name" required="" autofocus="">
       </div>
-      <div class="form__field">
+      <div class="form__field form__field--tel">
         <label for="customer-phone-popup" title="Ваш телефон"></label>
         <input id="customer-phone-popup" placeholder="Телефон" type="tel" name="phone" required="">
       </div>
-      <textarea id="customer-question-popup" placeholder="Ваш вопрос" name="question"></textarea>
+      <div class="form__field form__field--textarea">
+        <label for="customer-phone-popup" title="Задайте вопрос"></label>
+        <textarea id="customer-question-popup" placeholder="Ваш вопрос" name="question"></textarea>
+      </div>
       <div class="form__field form__field--checkbox">
         <input id="personal-data-popup" name="data" type="checkbox" checked="checked">
         <label class="form__label form__label--checkbox" for="personal-data-popup">Я согласен на обработку персональных данных</label>
       </div>
-      <button type="submit">Задать вопрос</button>
+      <button type="submit">Отправить</button>
     </form>
   </section>
   <script src="js/script.js"></script>

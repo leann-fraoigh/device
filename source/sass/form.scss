@@ -61,4 +61,12 @@
   }
 }
 
-
+@media (max-width: $m-width-max) {
+  .form {
+    & input[type=text],
+    & input[type=tel],
+    & textarea {
+      padding-bottom: 20px;
+    }
+  }
+}

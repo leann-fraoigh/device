@@ -36,7 +36,9 @@
   margin-left: -32px;
 }
 
-.consultation .form__field,
+.consultation .form__field--text, //Уточнено
+.consultation .form__field--tel,
+.consultation .form__field--checkbox, //Уточнено
 .consultation button {
   flex-grow: 1;
   flex-shrink: 1;
@@ -53,12 +55,19 @@
 }
 
 
-.consultation form textarea {
+.consultation .form__field--textarea {
   flex-basis: 100%;
-  margin-bottom: 43px;
+  margin-bottom: 37px; //Было 143
   margin-left: 32px;
 
-  min-height: 122px;
+  // min-height: 122px;
+}
+
+.consultation textarea {
+  box-sizing: border-box;
+
+  width: 100%;
+  min-height: 154px;
 }
 
 
@@ -110,9 +119,12 @@
     margin-bottom: 42px;
   }
 
+  .consultation .form__field--textarea {
+    margin-bottom: 38px;
+  }
+
   .consultation form textarea {
-    min-height: 127px;
-    margin-bottom: 45px;
+    min-height: 159px;
   }
 }
 
@@ -140,9 +152,14 @@
     flex-basis: 100%;
     margin-bottom: 31px;
   }
+
+  .consultation .form__field--textarea {
+    margin-bottom: 22px;
+  }
+
   .consultation form textarea {
-    min-height: 72px;
-    margin-bottom: 31px;
+    min-height: 104px;
+    // margin-bottom: 31px;
   }
 
   .consultation .form__label--checkbox {
