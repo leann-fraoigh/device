@@ -31,6 +31,8 @@
     position: relative;
     padding-left: 38px;
 
+    cursor: pointer;
+
     &::before {
       position: absolute;
       content: "";
