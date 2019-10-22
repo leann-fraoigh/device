@@ -83,7 +83,7 @@ var enableModal = function () {
   var openButton = document.querySelector('.contacts__button');
   var overlay = document.querySelector('.overlay');
   var closeButton = document.querySelector('.modal__close-button');
-  var nameInput = modal.querySelector('#customer-name');
+  var nameInput = modal.querySelector('#customer-name-popup');
 
   // Открыть модальное
   var openModal = function (evt) {
