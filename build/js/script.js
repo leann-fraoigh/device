@@ -162,23 +162,26 @@ if (window.localStorage) {
   }
 }
 
-// // ПРОКРУТКА
+// ПРОКРУТКА
 
-// var advantages = document.getElementById('advantages');
-// var consultation = document.getElementById('consultation');
+var advantagesLink = document.querySelector('.header__scroll-link');
+var consultationLink = document.querySelector('.header__main .button');
 
-// var advantagesLink = document.querySelector('.header__scroll-link');
-// var consultationLink = document.querySelector('.header__main .button');
+var handleAnchorClick = function () {
+  event.preventDefault();
+  var linkTarget = event.currentTarget.getAttribute('href');
+  var id = linkTarget.substring(1, linkTarget.length);
+  var aim = document.getElementById(id);
+  aim.scrollIntoView({block: 'start', behavior: 'smooth'});
+};
 
-// function handleAnchorClick(link, aim) {
-//   if (link && aim) {
-//     event.preventDefault();
-//     aim.scrollIntoView({block: 'start', behavior: 'smooth'});
-//   }
-// }
+if (advantagesLink) {
+  advantagesLink.addEventListener('click', handleAnchorClick);
+}
 
-// advantagesLink.addEventListener('click', handleAnchorClick(advantagesLink, advantages));
-// consultationLink.addEventListener('click', handleAnchorClick(consultationLink, consultation));
+if (consultationLink) {
+  consultationLink.addEventListener('click', handleAnchorClick);
+}
 
 // МАСКА ДЛЯ ПОЛЯ ТЕЛЕФОНА
 var telInputPopup = document.getElementById('customer-phone-popup');
