@@ -1,7 +1,8 @@
 'use strict';
 
+// ЗАМЕНА ТЕКСТА
 var changeButtonText = function () {
-  var headerButton = document.querySelector('.header__main button');
+  var headerButton = document.querySelector('.header__main .button');
   if (headerButton) {
     if (window.matchMedia('(max-width: 767px)').matches) {
       headerButton.innerHTML = 'Бесплатная консультация';
@@ -11,7 +12,7 @@ var changeButtonText = function () {
   }
 };
 
-// Перемещение блоков
+// ПЕРЕМЕЩЕНИЕ БЛОКОВ
 var moveCopyright = function () {
   var copyrightElem = document.getElementById('copyright');
   var confidentialityElem = document.querySelector('.footer__confidentiality');
@@ -33,7 +34,7 @@ window.addEventListener('resize', moveCopyright);
 changeButtonText();
 moveCopyright();
 
-// Скрытие блоков в футере
+// СКРЫТИЕ БЛОКОВ В ФУТЕРЕ
 
 var footer = document.querySelector('.footer');
 var menu = document.querySelector('.footer__menu');
@@ -75,6 +76,9 @@ if (contactsToggle) {
     }
   });
 }
+
+
+// МОДАЛЬНОЕ
 
 var enableModal = function () {
   var Enter = 13;
@@ -138,7 +142,8 @@ var enableModal = function () {
 enableModal();
 
 
-// Сохранение данных
+// СОХРАНЕНИЕ ДАННЫХ
+
 if (window.localStorage) {
   var modal = document.querySelector('.modal');
   var elements = modal.querySelectorAll('[id^="customer"]');
@@ -157,26 +162,33 @@ if (window.localStorage) {
   }
 }
 
-// var toggle = function (block) {
-//   var element = 'footer__' + block;
-//   var closed = 'footer__' + block + '--closed';
-//   var opened = 'footer__' + block + '--opened';
-//   var r = document.querySelector(element);
-//   var z = r.classList;
-//   if (z.contains(' + closed + ')) {
-//     contacts.classList.remove(closed);
-//     contacts.classList.add(opened);
-//   } else {
-//     contacts.classList.add(closed);
-//     contacts.classList.remove(opened);
+// // ПРОКРУТКА
+
+// var advantages = document.getElementById('advantages');
+// var consultation = document.getElementById('consultation');
+
+// var advantagesLink = document.querySelector('.header__scroll-link');
+// var consultationLink = document.querySelector('.header__main .button');
+
+// function handleAnchorClick(link, aim) {
+//   if (link && aim) {
+//     event.preventDefault();
+//     aim.scrollIntoView({block: 'start', behavior: 'smooth'});
 //   }
-// };
-
-// if (contactsToggle) {
-//   contactsToggle.addEventListener('click', toggle('contacts'));
 // }
 
-// if (menuToggle) {
-//   contactsToggle.addEventListener('click', toggle('menu'));
-// }
+// advantagesLink.addEventListener('click', handleAnchorClick(advantagesLink, advantages));
+// consultationLink.addEventListener('click', handleAnchorClick(consultationLink, consultation));
 
+// МАСКА ДЛЯ ПОЛЯ ТЕЛЕФОНА
+var telInput = document.getElementById('customer-phone-popup');
+
+var testSymbol = function () {
+  var text = telInput.value;
+  // eslint-disable-next-line eqeqeq
+  if (isNaN(text)) {
+    telInput.value = text.substring(0, text.length - 1);
+  }
+};
+
+telInput.addEventListener('keyup', testSymbol);
