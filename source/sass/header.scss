@@ -65,18 +65,17 @@
     position: relative;
 
     // padding-right: 315px;
-
-    &::after {
-      content: "Скролл вниз";
+    .header__scroll-link {
+      position: absolute;
       bottom: -150px;
       left: -38px;
-      position: absolute;
 
       font-size: 14px;
       line-height: 16px;
 
       opacity: 0.5;
       transform: rotate(-90deg);
+      scroll-behavior: smooth
     }
   }
 }
@@ -115,7 +114,7 @@
   }
 }
 
-.header__main button {
+.header__main .button {
   margin-left: 94px;
   padding: 18px 45px;
 
@@ -158,10 +157,14 @@
     }
   }
 
-  .header__main button {
+  .header__main .button {
     margin-left: 47px;
     padding-right: 31px;
     padding-left: 31px;
+  }
+
+  .header__scroll-link {
+    display: none;
   }
 }
 
@@ -213,14 +216,14 @@
     line-height: 25px;
   }
 
-  .header__main button {
+  .header__main .button {
     margin-left: 0;
     padding-left: 32px;
     padding-right: 32px;
   }
 
   @-moz-document url-prefix() {
-    .header__main button {
+    .header__main .button {
        padding-left: 30px;
        padding-right: 30px;
     }
