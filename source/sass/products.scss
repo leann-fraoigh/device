@@ -4,7 +4,7 @@
   // margin-bottom: 75px;
   padding-left: $l-padding;
   padding-right: $l-padding;
-  padding-bottom: 127px;
+  padding-bottom: 97px;
   padding-top: 59px;
 
   color: $light-color;
@@ -22,6 +22,7 @@
   @include reset-list-style;
 
   display: flex;
+  flex-wrap: wrap;
   // justify-content: center;
 
   margin-top: 50px;
@@ -35,11 +36,13 @@
   display: flex;
   flex-grow: 1;
   flex-shrink: 1;
+  flex-basis: 30%;
 
   min-height: 620px;
   @media (min-width: $l-width) {
     max-width: 370px;
     margin-left: 30px;
+    margin-bottom: 30px;
   }
 
   background-color: rgba(98,105,98,.2);
