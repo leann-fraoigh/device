@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable new-cap */
+/* eslint-disable no-unused-vars */
 'use strict';
 
 // ЗАМЕНА ТЕКСТА
@@ -184,23 +187,51 @@ if (consultationLink) {
 }
 
 // МАСКА ДЛЯ ПОЛЯ ТЕЛЕФОНА
-var telInputPopup = document.getElementById('customer-phone-popup');
+
+// var telInputPopup = document.getElementById('customer-phone-popup');
+// var telInput = document.getElementById('customer-phone');
+
+// var testSymbol = function () {
+//   var id = event.target.id;
+//   var element = document.getElementById(id);
+//   var text = element.value;
+//   if (isNaN(text)) {
+//     element.value = text.substring(0, text.length - 1);
+//   }
+// };
+
+// if (telInputPopup) {
+//   telInputPopup.addEventListener('keyup', testSymbol);
+// }
+
+// if (telInputPopup) {
+//   telInput.addEventListener('keyup', testSymbol);
+// }
+
+// var telInputPopup = document.getElementById('customer-phone-popup');
+
+
 var telInput = document.getElementById('customer-phone');
 
-var testSymbol = function () {
-  var id = event.target.id;
-  var element = document.getElementById(id);
-  var text = element.value;
-  if (isNaN(text)) {
-    element.value = text.substring(0, text.length - 1);
-  }
+var maskOptions = {
+  mask: '+{7}(000)000-00-00'
 };
+// eslint-disable-next-line no-undef
+var mask = IMask(telInput, maskOptions);
 
-if (telInputPopup) {
-  telInputPopup.addEventListener('keyup', testSymbol);
-}
+// var numberMask = IMask(telInput, {
+//   mask: Number, // enable number mask
 
-if (telInputPopup) {
-  telInput.addEventListener('keyup', testSymbol);
-}
+//   // other options are optional with defaults below
+//   scale: 2, // digits after point, 0 for integers
+//   signed: false, // disallow negative
+//   thousandsSeparator: '', // any single char
+//   padFractionalZeros: false, // if true, then pads zeros at end to the length of scale
+//   normalizeZeros: true, // appends or removes zeros at ends
+//   radix: ',', // fractional delimiter
+//   mapToRadix: ['.'], // symbols to process as radix
 
+//   // additional number interval options (e.g.)
+//   min: 0,
+//   max: 100000000000
+// });
