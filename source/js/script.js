@@ -1,3 +1,4 @@
+/* eslint-disable no-redeclare */
 /* eslint-disable no-undef */
 /* eslint-disable new-cap */
 /* eslint-disable no-unused-vars */
@@ -212,10 +213,12 @@ if (consultationLink) {
 
 
 var telInput = document.getElementById('customer-phone');
+var telInputPopup = document.getElementById('customer-phone-popup');
 
 var maskOptions = {
   mask: '+{7}(000)000-00-00'
 };
 // eslint-disable-next-line no-undef
 var mask = IMask(telInput, maskOptions);
+var mask = IMask(telInputPopup, maskOptions);
 
