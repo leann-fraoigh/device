@@ -77,13 +77,13 @@
       transform: rotate(-90deg);
       scroll-behavior: smooth;
 
-      &:hover,
-      &:focus {
-        opacity: 1;
-      }
-
       &:focus {
         text-decoration: none;
+      }
+
+      &:hover {
+        opacity: 1;
+        text-decoration: underline;
       }
     }
   }
