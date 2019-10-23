@@ -31,6 +31,8 @@
   border-left: none;
   box-shadow: -3px 0px 0px 0px $brand-color;
 
+  cursor: default;
+
   @media (min-width: $m-width) {
     min-height: 219px;
     margin-right: 30px;
@@ -71,7 +73,7 @@
 @media (max-width: $m-width-max) {
   .advantages {
     max-width: 973px;
-    margin-bottom: 25px;
+    margin-bottom: 27px;
     padding-left: $m-padding;
     padding-right: $m-padding;
     padding-top: 54px;
