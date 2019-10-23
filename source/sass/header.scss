@@ -75,7 +75,16 @@
 
       opacity: 0.5;
       transform: rotate(-90deg);
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+
+      &:focus {
+        text-decoration: none;
+      }
     }
   }
 }
