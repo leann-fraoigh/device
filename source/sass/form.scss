@@ -58,9 +58,13 @@
     background-size: 10px 6px;
   }
 
-  & input[type=checkbox]:hover ~ .form__label,
-  & input[type=checkbox]:focus ~ .form__label {
+  & input[type=checkbox]:hover ~ .form__label {
     opacity: 1;
+  }
+
+  & input[type=checkbox]:focus ~ .form__label {
+    text-decoration: underline;
+    text-decoration-style: dotted;
   }
 }
 
